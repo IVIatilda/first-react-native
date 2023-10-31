@@ -1,7 +1,7 @@
 import { ACTIONS } from "./actions";
 
 const initialState = {
-  isAdmin: false,
+  isAuth: false,
   name: '',
   age: '',
   email: '',
@@ -12,12 +12,12 @@ const appReducer = (state = initialState, action: {type: ACTIONS; value?: string
     case ACTIONS.LOGIN:
       return {
         ...state,
-        isAdmin: true,
+        isAuth: true,
       };
     case ACTIONS.LOGOUT:
       return {
         ...state,
-        isAdmin: false,
+        isAuth: false,
       };
     case ACTIONS.SET_NAME:
       return {

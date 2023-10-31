@@ -7,17 +7,15 @@ import Container from '../../shared/components/container';
 export default function ListScreen() {
   return (
     <Container>
-      <SafeAreaView>
-        <FlatList
-          windowSize={11}
-          data={data}
-          renderItem={({item}) => (
-            <ListItem title={item.name} text={item.text} image={item.image} />
-          )}
-          keyExtractor={item => item.id}
-          ListHeaderComponent={<H2 title={'Список'} />}
-        />
-      </SafeAreaView>
+      <FlatList
+        windowSize={11}
+        data={data}
+        renderItem={({item}) => (
+          <ListItem title={item.name} text={item.text} image={item.image} />
+        )}
+        keyExtractor={item => item.id}
+        ListHeaderComponent={<H2 title={'Список'} />}
+      />
     </Container>
   );
 }

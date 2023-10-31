@@ -4,6 +4,6 @@ import LoggedOut from './logged-out';
 import {useSelector} from 'react-redux';
 
 export default function Navigation() {
-  const isAdmin = useSelector(state => state.isAdmin);
-  return !isAdmin ? <LoggedOut /> : <LoggedIn />;
+  const isAuth = useSelector(state => state.isAuth);
+  return !isAuth ? <LoggedOut /> : <LoggedIn />;
 }
