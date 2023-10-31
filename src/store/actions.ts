@@ -1,0 +1,7 @@
+export enum ACTIONS {
+  LOGIN = 'LOGIN',
+  LOGOUT = 'LOGOUT',
+  SET_NAME = 'SET_NAME',
+  SET_AGE = 'SET_AGE',
+  SET_EMAIL = 'SET_EMAIL',
+}
