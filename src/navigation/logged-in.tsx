@@ -25,6 +25,7 @@ export default function LoggedIn() {
         },
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
+        headerShown: false,
       })}>
       <Tab.Screen
         name={Screens.User}

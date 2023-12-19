@@ -1,21 +1,23 @@
-import {FlatList, SafeAreaView} from 'react-native';
-import data from '../../shared/data/data';
-import {ListItem} from '../../shared/components/list-item';
-import H2 from '../../shared/components/h2';
-import Container from '../../shared/components/container';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Screens} from '../../navigation/screens';
+import ReviewScreen from './pages/review';
+import ListPage from './pages/list';
+
+const ListStack = createNativeStackNavigator();
 
 export default function ListScreen() {
   return (
-    <Container>
-      <FlatList
-        windowSize={11}
-        data={data}
-        renderItem={({item}) => (
-          <ListItem title={item.name} text={item.text} image={item.image} />
-        )}
-        keyExtractor={item => item.id}
-        ListHeaderComponent={<H2 title={'Список'} />}
+    <ListStack.Navigator screenOptions={{headerShown: false}}>
+      <ListStack.Screen
+        name={Screens.List}
+        component={ListPage}
+        options={{title: 'Отзывы'}}
       />
-    </Container>
+      <ListStack.Screen
+        name={Screens.Review}
+        component={ReviewScreen}
+        options={{title: 'Отзыв'}}
+      />
+    </ListStack.Navigator>
   );
 }

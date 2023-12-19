@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   item: {
@@ -16,11 +16,12 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: 'bold',
+    flexShrink: 1,
   },
   text: {
     fontSize: 16,
   },
   image: {
-    borderRadius: 50
-  }
+    borderRadius: 50,
+  },
 });

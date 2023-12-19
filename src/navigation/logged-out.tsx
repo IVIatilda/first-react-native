@@ -22,6 +22,7 @@ export default function LoggedOut() {
         },
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
+        headerShown: false,
       })}>
       <Tab.Screen
         name={Screens.Login}
